@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<!-- header section end -->
+  <!-- product section start -->
+  <div class="product_section layout_padding" style="padding-bottom: 10px;">
+    <div class="container">
+      <div class="product_text">List of <span style="color: #5ca0e9;">games</span></div>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Image</th>
+            <th scope="col">price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Descrip</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% items.forEach(function(items){ %>
+          <tr>
+            <td> <a href="javascript:void(0)">#<%- items._id %></a></td>
+            <td> <%- items.Name %></td>
+            <td>
+              <img src="/upload/<%=items.image; %>" style="width: 90px; height: 90;">
+              </td>
+            <td> <%- items.price %></td>
+            <td> <%- items.quantity %></td>
+            <td> <%- items.descrip %></td>
+            <td>
+              <button type="button" class="btn btn-primary">Edit</button>
+              <button type="button" class="btn btn-danger">Delete</button>
+            </td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+      
+      
+
+      <div class="see_main">
+        <div class="see_bt" style="margin-bottom: 40px;"><a href="http://localhost:3200/page/newcat">Add More</a></div>
+      </div>
+    </div>
+  </div>
+  <!-- product section end -->
+  <!-- footer section start -->
+
+  <!-- copyright section end -->
+  <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- javascript --> 
+    <script src="js/owl.carousel.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    $(".fancybox").fancybox({
+        openEffect: "none",
+        closeEffect: "none"
+        })});
+    </script>
+    
+</body>
+</html>
